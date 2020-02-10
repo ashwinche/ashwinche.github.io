@@ -1,1 +1,66 @@
-hello world
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="scripts.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Forum|Ovo|Rambla" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+</head>
+
+<body>
+<div class='container'>
+<div class="headings">
+  <div>Ashwin Chetty</div>
+  <div>[id] [at] [schoolname] [dot] [domain]</div>
+  <!-- <div><a href='https://www.linkedin.com/in/ashwin-kumar-chetty/'>LinkedIn</a></div> -->
+</div>
+
+<ul>
+  <li>
+    <h3>Implementing an Efficient Continuous 3D Median Filter (2017)</h3>
+    <div>
+      Several approaches are discussed in implementing a 3D median filter without the use of histograms. We find that while binary trees provide theoretically faster insertion and deletion operations, these asymptotic benefits are outweighed in hardware by the costs of their relatively random memory access patterns, which lead to a high level of cache inefficiency. A better approach (not discussed in the paper) would be to use the <b>huang</b> algorithm with a <a href='https://stackoverflow.com/a/15319593'>"median heap"</a>, which is simpler to rebalance than a binary tree, and has much more predictable memory access patterns when traversing from child to parent, while still allowing for O(1) median calculation. Node replacement would still be computable in logarithmic time, and, for each pixel, O(n<sup>2</sup> log n) array swap operations would need to be performed, compared with O(n<sup>3</sup>) for the Quickselect method shown1. 
+    </div>
+  </li>
+  <li>
+    <a href='paper-ads.pdf'>
+      <h3>"There's Nothing Wrong With Looking at Boats" (2017)</h3>
+    </a>
+    <div>
+      We ran an expository study on user response to the advertisements that they receive through standard <a href='https://pdfs.semanticscholar.org/db4c/502bafef23e7d8b1de60d628c952a4780acc.pdf'>Online Behavioral Advertising</a> techniques. We find that, in most cases, internet users prefer to receive advertisements that correctly describe their behavior, and dislike it when they do not. (eg. boating enthusiasts do not mind seeing advertisements about boats, and gambling enthusiasts do not mind seeing advertisements about gambling, but a person who does not drink would prefer not to see ads about alcohol). However, for certain categories, this trend is significantly reversed when these advertisements are viewed by their employers. When a person's served advertisements are visible to their employer, they prefer to be <i>misrepresented</i> by the advertisement. For example, a person seeking legal services would feel uncomfortable if an employer saw them receive an advertisement for a law firm, but would be relatively comfortable otherwise. 
+    </div>
+  </li>
+  <li>
+    <a href='oceanwater.pdf'>
+      <h3>Infinite Ocean Waves and Reflection (2017)</h3>
+    </a>
+    <div>
+      This is a demonstration of ocean water reflection over a <a href='https://en.wikipedia.org/wiki/Trochoidal_wave'>Gerstner wave simulation</a>. Gerstner waves are a commonly used method of describing physically-plausible and computationally-cheap volumetric ocean waves. In this setting, they are especially useful because their geometries are continuously parameterizable (with respect to 2 spatial dimensions + time), which allows wave generation to take place entirely within the vertex shader. Normal calculation is also performed within the shader, and reflections are computed accordingly. Because Gerstner waves can be computed based on global spatial coordinates, it is possible to generate infinitely-sized volumes of water which still have consistent waves. A video can be seen <a href='water.mp4'> here</a>.
+    </div>
+  </li>
+  <li>
+    <h3>Navigating Robots in Human Environments: University of Minnesota (2013)</h3>
+    <div>
+      We developed a method to navigate a small <a href='https://www.sphero.com/'>Sphero</a> robot around a region scattered with non-uniform obstacles, using an overhead Kinect sensor. The Sphero has two internal motors and a gyroscope for navigation; communicates with a central computer using Bluetooth; and has a distinguishable shape that can be identified by the Kinect.
+    </div>
+  </li>
+  <li>
+    <a href='https://www.youtube.com/watch?v=ZFjv0tVzph8'>
+      <h3>3D Room Reconstruction with the Microsoft Kinect: Carleton College (2013)</h3>
+    </a>
+    <div>
+      We developed a method to stitch together 3D models of rooms using the Microsoft Kinect. We determine the relative orientation between frames by comparing the areas of 2D planes in the scene, computed using a RANSAC technique with the depth image.
+    </div>
+  </li>
+  <li>
+    <h3>Underwater flying boids. Swarm intelligence simulation with paper airplanes (2012)</h3>
+    <div>
+      A demonstration of <a href='https://en.wikipedia.org/wiki/Boids'>boids</a>: simulated bird-like objects that exhibit simple flocking behavior. This example demonstrates fish-oids, which reproduce and flock toward food sources. Foids die of starvation if they run out of food, and reproduce if they can secure enough food. Foid offspring maintain appearance and behavior similar to those of their parents. Food sources regularly respawn. Written in C++, OpenGL/GLSL.
+    </div>
+  </li>
+</ul>
+
+</div>
+</body>
+</html>

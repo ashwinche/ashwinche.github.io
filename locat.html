@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>  
+<html>
+<head>
+<title id="title">searching</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<script type="text/javascript">
+
+function setText(val, e) {
+    document.getElementById(e).value = val;
+}
+
+function insertText(val, e) {
+    document.getElementById(e).value += val;
+}
+
+var nav = null; 
+
+function requestPosition() {
+  if (nav == null) {
+      nav = window.navigator;
+  }
+  if (nav != null) {
+      var geoloc = nav.geolocation;
+      if (geoloc != null) {
+          geoloc.getCurrentPosition(successCallback);
+      }
+      else {
+          alert("geolocation not supported");
+      }
+  }
+  else {
+      alert("Navigator not found");
+  }
+}
+
+window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+    document.title='('+startPos.coords.latitude+', '+startPos.coords.longitude+')';
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
+
+
+
+function successCallback(position){
+   // setText(position.coords.latitude, "latitude");
+   // setText(position.coords.longitude, "longitude");
+   document.title='('+position.coords.latitude+', '+position.coords.longitude+')';
+}
+
+
+
+</script>
+</head>
+<!--
+<body onload = "requestPosition()">
+-->
+<label for="latitude">L1: </label><input id="startLat" /> <br />
+<label for="longitude">L2: </label><input id="startLon" /> <br />
+<!--
+<input type="button" onclick="requestPosition()" value="Get Latitude and Longitude"  /> 
+-->
+
+</body>
+</html>
